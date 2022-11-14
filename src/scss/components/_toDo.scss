@@ -6,8 +6,28 @@
   font-size: $font-size;
   font-family: $font-family;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  #theme {
+    display: none;
+  }
+  // #theme:checked ~ .theme-switch {
+  //   background: url("../../assets/images/icon-sun.svg") no-repeat left center !important;
+  // }
+  .theme-switch {
+    // border: 1px solid #000;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    background: url("../../assets/images/icon-moon.svg") no-repeat left center;
+    cursor: pointer;
+    /* padding-left: 15px; */
+  }
+  .icon-sun{
+    background: url("../../assets/images/icon-sun.svg") no-repeat left center;
+  }
 }
 .main-app__categories {
   p{
@@ -210,6 +230,7 @@
   position: absolute;
   top: 13px;
   width: 18px;
+  background-origin: border-box;
 }
 
 .main-app__input__check .done-label:after {
@@ -218,10 +239,10 @@
   border-right: none;
   content: "";
   height: 3px;
-  left: 4.5px;
+  left: 5.5px;
   opacity: 0;
   position: absolute;
-  top: 6px;
+  top: 7.3px;
   transform: rotate(-45deg);
   width: 8px;
 }
@@ -232,7 +253,9 @@
 }
 .main-app__input__check input[type="checkbox"]:checked + .done-label {
   background: $primary-background;
-  border-color: transparent;
+  border:none;
+  width: 19.6px;
+  height: 19.6px;
 }
 
 .main-app__input__check input[type="checkbox"]:checked + .done-label:after {

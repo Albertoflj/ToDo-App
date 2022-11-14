@@ -13,7 +13,6 @@ function List() {
     // )
     switch (category) {
       case "all":
-        console.log("alllllll");
         return (
           <div className="list">
              {items

@@ -10,6 +10,7 @@ function Header(props) {
   }
   const handleClick = () => {
     document.body.classList.toggle("dark-theme");
+    document.getElementById("theme-label").classList.toggle("icon-sun");
     darkTheme = !darkTheme;
     if (darkTheme) {
       localStorage.setItem("theme", "dark");
@@ -24,13 +25,13 @@ function Header(props) {
   return (
     <div className="main-app__header">
       <h1>T O D O</h1>
+      <label htmlFor="theme" id="theme-label" className="theme-switch" onClick={handleClick}/> 
       <input
         ref={ref}
         type="checkbox"
         name="theme"
         id="theme"
         defaultChecked={darkTheme}
-        onClick={handleClick}
       />
     </div>
   );
