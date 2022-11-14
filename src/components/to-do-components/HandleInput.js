@@ -15,6 +15,10 @@ function HandleInput() {
       let id = createId();
       let content = inputRef.current.value;
       let checked = checkedRef.current.checked;
+      if(content.length < 3){
+        alert("Please enter a valid task");
+        return;
+      }
       const items = JSON.parse(localStorage.getItem("items")) || [];
       items.unshift({ id, content, checked });
       localStorage.setItem("items", JSON.stringify(items));
