@@ -7,12 +7,12 @@ function ToDo(props) {
 
 
   // on storage change update items
-  //! BUG
-  function onStorageChange() {
-    // setItems(JSON.parse(localStorage.getItem("items")));
-    // items ? itemsLeft = filterItemsLeft() : null;
-  }
-  window.addEventListener("storage", onStorageChange);
+  // //! BUG
+  // function onStorageChange() {
+  //   // setItems(JSON.parse(localStorage.getItem("items")));
+  //   // items ? itemsLeft = filterItemsLeft() : null;
+  // }
+  // window.addEventListener("storage", onStorageChange);
 
 
 

@@ -11,12 +11,13 @@ function Categories(){
 
   const [items, setItems] = useState(null);
   const [currentCategory, setCurrentCategory] = useState("all");
-  const lastCat = useRef(null);
+  let lastCategory = localStorage.getItem("currentCategory");
+  categories[currentCategory] = "selected-category";
   useEffect(() => {
-    setCurrentCategory(localStorage.getItem("currentCategory"));
     setItems(JSON.parse(localStorage.getItem("items")));
-   
-    categories[currentCategory] = "selected-category";
+    if(lastCategory){
+      setCurrentCategory(lastCategory);
+    }
     
   }, []);
 
@@ -26,12 +27,8 @@ function Categories(){
     localStorage.setItem("currentCategory", e.target.id);
     window.dispatchEvent(new Event("storage"));
     categories[currentCategory] = "selected-category";
-    console.log(
-      categories.all,
-      categories.active,
-      categories.completed
-    )
   };
+  
   const filterItemsLeft = () =>{
     return items.filter(item => item.checked === false).length;
   }
