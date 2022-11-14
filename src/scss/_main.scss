@@ -1,0 +1,58 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: $lt-very-light-gray;
+  transition: all 0.2s ease-in-out;
+  &.dark-theme {
+    background-color: $dt-very-dark-blue;
+    .main-app__input {
+      background-color: $dt-very-dark-desaturated-blue;
+      .todo {
+        color: $lt-very-light-gray;
+      }
+      .todo::placeholder {
+        color: $dt-light-grayish-blue;
+      }
+    }
+    .item {
+      background-color: $dt-very-dark-desaturated-blue;
+      color: $dt-dark-grayish-blue;
+      border-bottom: 1px solid $dt-very-dark-grayish-blue;
+    }
+
+    .checked{
+
+      color: $dt-very-dark-grayish-bluet !important;
+    }
+
+    .main-app__categories{
+      background-color: $dt-very-dark-desaturated-blue;
+    }
+    .mob-cat{
+      background-color: $dt-very-dark-desaturated-blue;
+    }
+  }
+  
+  .checked{
+   
+    color: $lt-light-grayish-blue !important;
+  }
+  .cut-text{
+    text-decoration: line-through;
+  }
+
+}
+.button-selected{
+  background-color: $primary-blue;  
+}
+#root {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-category{
+  color: $primary-blue;
+}

@@ -1,0 +1,44 @@
+{
+  "name": "todo-app-main",
+  "version": "1.0.0",
+  "react": "^16.13.0",
+  "react-dom": "^16.13.0",
+  "react-scripts": "4.0.3",
+  "description": "To Do App.",
+  "main": "./src/index.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albertoflj/ToDo-App.git"
+  },
+  "author": "Alberto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Albertoflj/ToDo-App/issues"
+  },
+  "dependencies": {
+    "git": "^0.1.5",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.56.0",
+    "scss": "^0.2.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

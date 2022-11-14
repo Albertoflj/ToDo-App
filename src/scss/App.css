@@ -1,0 +1,41 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(0deg, 0%, 98%);
+  transition: all 0.2s ease-in-out;
+}
+body.dark-theme {
+  background-color: hsl(235deg, 21%, 11%);
+}
+body.dark-theme .main-app__input {
+  background-color: hsl(235deg, 24%, 19%);
+}
+body.dark-theme .main-app__input .todo {
+  color: hsl(0deg, 0%, 98%);
+}
+body.dark-theme .main-app__input .todo::-moz-placeholder {
+  color: hsl(234deg, 39%, 85%);
+}
+body.dark-theme .main-app__input .todo:-ms-input-placeholder {
+  color: hsl(234deg, 39%, 85%);
+}
+body.dark-theme .main-app__input .todo::placeholder {
+  color: hsl(234deg, 39%, 85%);
+}
+body.dark-theme .item {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+  border-bottom: 1px solid hsl(233deg, 14%, 35%);
+}
+
+#root {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */
