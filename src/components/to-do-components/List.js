@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 function List() {
   const [items, setItems] = useState(null);
   const [currentCategory, setCurrentCategory] = useState("all");
+
+  //dummy data in case local storage is empty
   let dummyData = {
     items: [
       {
@@ -39,16 +41,18 @@ function List() {
       },
     ]
   }
+
+  //if user visits the page for the first time, set dummy data to local storage
   if(localStorage.getItem("firstTimeVisiting") === null){
     localStorage.setItem("firstTimeVisiting", "false");
     localStorage.setItem("items", JSON.stringify(dummyData.items));
   }
+
   let lastCategory = localStorage.getItem("currentCategory");
   window.addEventListener("storage", onStorageChange);
+
+  //choses what to show depending on the current category
   function handleCategoryFunctions(category) {
-    // return(
-    //   <div className="list"></div>
-    // )
     switch (category) {
       case "all":
         return (
@@ -113,13 +117,12 @@ function List() {
       handleCategoryFunctions(lastCategory);
     }
   }, []);
-  // const [value, setValue] = useState("");
+
   function onStorageChange() {
     setItems(JSON.parse(localStorage.getItem("items")));
     setCurrentCategory(localStorage.getItem("currentCategory"));
     handleCategoryFunctions(currentCategory);
     }
-
     return (
       handleCategoryFunctions(currentCategory)
     );
