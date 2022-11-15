@@ -5,6 +5,44 @@ import { useEffect, useState } from "react";
 function List() {
   const [items, setItems] = useState(null);
   const [currentCategory, setCurrentCategory] = useState("all");
+  let dummyData = {
+    items: [
+      {
+        id: 1,
+        content:"Complete online JavaScript course",
+        checked: false,
+      },
+      {
+        id: 2,
+        content:"Jog around the park 3x",
+        checked: false,
+      },
+      {
+        id: 3,
+        content:"10 minutes meditation",
+        checked: false,
+      },
+      {
+        id: 4,
+        content:"Read for 1 hour",
+        checked: false,
+      },
+      {
+        id: 5,
+        content:"Pick up groceries",
+        checked: false,
+      },
+      {
+        id: 6,
+        content:"Complete Todo App on Frontend Mentor",
+        checked: false,
+      },
+    ]
+  }
+  if(localStorage.getItem("firstTimeVisiting") === null){
+    localStorage.setItem("firstTimeVisiting", "false");
+    localStorage.setItem("items", JSON.stringify(dummyData.items));
+  }
   let lastCategory = localStorage.getItem("currentCategory");
   window.addEventListener("storage", onStorageChange);
   function handleCategoryFunctions(category) {

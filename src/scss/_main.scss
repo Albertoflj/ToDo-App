@@ -10,6 +10,7 @@ body {
       background-color: $dt-very-dark-desaturated-blue;
       .todo {
         color: $lt-very-light-gray;
+        caret-color: white;
       }
       .todo::placeholder {
         color: $dt-light-grayish-blue;
@@ -18,7 +19,7 @@ body {
     .item {
       background-color: $dt-very-dark-desaturated-blue;
       color: $dt-dark-grayish-blue;
-      border-bottom: 1px solid $dt-very-dark-grayish-blue;
+      border-bottom: .0625rem solid $dt-very-dark-grayish-blue;
     }
 
     .checked{
