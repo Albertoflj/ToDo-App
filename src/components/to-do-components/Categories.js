@@ -56,7 +56,7 @@ function Categories(){
 
 
     return (
-      <div>
+      <div className="categories-container">
 
         <div className="main-app__categories ">
           <p className="items-left">{itemsLeft} items left </p>
