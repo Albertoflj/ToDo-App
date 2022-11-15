@@ -11,7 +11,10 @@ function Item(props) {
   useEffect(() => {
     setItems(JSON.parse(localStorage.getItem("items")));
   }, []);
-  
+
+  function createId() {
+    return Math.floor(Math.random() * 100000000);
+  }
   // on storage change update items
   function onStorageChange() {
     setItems(JSON.parse(localStorage.getItem("items")));
@@ -19,10 +22,6 @@ function Item(props) {
   }
   window.addEventListener("storage", onStorageChange);
 
-  
-  function createId() {
-    return Math.floor(Math.random() * 100000000);
-  }
   let id = createId();
 
   function handleChecked(){

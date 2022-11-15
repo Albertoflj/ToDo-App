@@ -1,5 +1,4 @@
 import {useState, useEffect, useRef} from "react";
-// import "../../scss/_main.scss";
 
 function Categories(){
   let categories = {
@@ -73,9 +72,6 @@ function Categories(){
           <button id="completed" className={categories.completed} data-text="Completed" onClick={(e) => {handleCurrentCategory(e)}}>Completed</button>
         </div>    
       </div>
-        // <div className="main-app__categories mobile-cat">
-
-        // </div>
     );
 }
 

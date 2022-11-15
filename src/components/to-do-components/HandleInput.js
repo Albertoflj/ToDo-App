@@ -3,13 +3,12 @@ import { useRef } from "react";
 function HandleInput() {
   const inputRef = useRef(null);
   const checkedRef = useRef(null);
-  // every item ls should hold an id, checked and content
-
- 
 
   function createId() {
     return Math.floor(Math.random() * 100000000);
   }
+
+  //when user presses enter
   function handleKeyDown(e) {
     if (e.key === "Enter") {
       let id = createId();
