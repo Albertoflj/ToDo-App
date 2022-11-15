@@ -46,6 +46,8 @@ function List() {
   if(localStorage.getItem("firstTimeVisiting") === null){
     localStorage.setItem("firstTimeVisiting", "false");
     localStorage.setItem("items", JSON.stringify(dummyData.items));
+    localStorage.setItem("currentCategory", "all");
+    localStorage.setItem("theme", "dark");
   }
 
   let lastCategory = localStorage.getItem("currentCategory");
